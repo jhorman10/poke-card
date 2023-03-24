@@ -7,9 +7,9 @@ export default function loginHandler(req, res) {
 
   const expToken = Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 30;
 
-  const verifyUsers = (email = '', password = '', users = []) => {
+  const verifyUsers = (email, password, users) => {
     return users.find(
-      ({ email, password }) => email === email && password === password
+      (user) => user.email === email && user.password === password
     );
   };
 
