@@ -1,6 +1,7 @@
-import { serialize } from 'cookie';
 import jwt from 'jsonwebtoken';
+import { serialize } from 'cookie';
 import users from '../../../db/users.json';
+import { TOKEN_SECRET, TOKEN_NAME, USER_NAME } from '@/constants';
 
 export default function loginHandler(req, res) {
   let { email, password } = req.body;
@@ -18,11 +19,12 @@ export default function loginHandler(req, res) {
       {
         exp: expToken,
         email,
+        username: `${USER_NAME} ${email}`,
         password,
       },
-      'secret'
+      TOKEN_SECRET
     );
-    const serialized = serialize('MyToken', token, {
+    const serialized = serialize(TOKEN_NAME, token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'strict',

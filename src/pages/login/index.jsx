@@ -1,26 +1,9 @@
-import axios from 'axios';
-import React, { useState } from 'react';
+import useForm from '@/hooks/useForm';
+import useLogin from '@/hooks/useLogin';
 
 export default function LoginPage() {
-  const [credentials, setCredentials] = useState({
-    email: '',
-    password: '',
-  });
-
-  const handleChange = ({ target }) => {
-    setCredentials({
-      ...credentials,
-      [target.name]: target.value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const response = await axios.post('/api/auth/login', credentials);
-    console.log(response);
-  };
-
-  let { email, password } = credentials;
+  const { email, password, validForm, credentials, handleChange } = useForm();
+  const { handleSubmit } = useLogin(credentials);
 
   return (
     <form onSubmit={handleSubmit} className="w-screen h-screen max-w-sm">
@@ -72,6 +55,7 @@ export default function LoginPage() {
           <button
             className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
             type="submit"
+            disabled={!validForm}
           >
             Sign In
           </button>
