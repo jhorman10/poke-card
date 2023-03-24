@@ -1,0 +1,22 @@
+[
+  {
+    "email": "mail1@mail.com",
+    "password": "pw1mail"
+  },
+  {
+    "email": "mail2@mail.com",
+    "password": "pw2mail"
+  },
+  {
+    "email": "mail3@mail.com",
+    "password": "pw3mail"
+  },
+  {
+    "email": "mail4@mail.com",
+    "password": "pw4mail"
+  },
+  {
+    "email": "mail5@mail.com",
+    "password": "pw5mail"
+  }
+]
