@@ -19,11 +19,11 @@ export default function loginHandler(req, res) {
       {
         exp: expToken,
         email,
-        username: `${USER_NAME} ${email}`,
-        password,
+        username: USER_NAME,
       },
       TOKEN_SECRET
     );
+
     const serialized = serialize(TOKEN_NAME, token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',

@@ -6,9 +6,8 @@ export default function useLogin(credentials) {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(credentials);
     const response = await axios.post('/api/auth/login', credentials);
-    response.status === 200 && router.push('/');
+    response.status === 200 && router.push('/dashboard');
   };
 
   return {

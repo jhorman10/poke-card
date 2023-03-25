@@ -1,6 +1,7 @@
+import Card from '@/components/Card';
 import { useLogout } from '@/hooks/useLogout';
 import { useUser } from '@/hooks/useUser';
-import Layout from '../Layout/Layout';
+import Layout from '../../components/Layout/Layout';
 
 export default function Dashboard() {
   const { user, getProfile } = useUser();
@@ -24,6 +25,7 @@ export default function Dashboard() {
       >
         Logout
       </button>
+      <Card/>
     </Layout>
   );
 }
