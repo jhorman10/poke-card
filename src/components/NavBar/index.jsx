@@ -9,7 +9,9 @@ export default function NavBar() {
   return (
     <>
       {spinner ? (
-        <Spinner />
+        <div className="h-screen flex items-center justify-center">
+          <Spinner />
+        </div>
       ) : (
         <nav className="w-full bg-gray-800 shadow">
           <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">

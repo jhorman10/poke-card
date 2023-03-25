@@ -11,7 +11,9 @@ export default function LoginPage() {
   return (
     <>
       {spinner ? (
-        <Spinner />
+        <div className="h-screen flex items-center justify-center">
+          <Spinner />
+        </div>
       ) : (
         <div className="mt-80 h-screen flex items-center justify-center">
           <form onSubmit={handleSubmit} className="w-screen h-screen max-w-sm">
