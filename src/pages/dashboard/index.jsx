@@ -1,8 +1,9 @@
+import { useEffect } from 'react';
 import Card from '@/components/Card';
 import Pagination from '@/components/Pagination';
+import { Spinner } from '@/components/Spinner';
 import usePagination from '@/hooks/usePagination';
 import usePokemons from '@/hooks/usePokemons';
-import { useEffect } from 'react';
 import Layout from '../../components/Layout/Layout';
 
 export default function Dashboard() {
@@ -16,15 +17,15 @@ export default function Dashboard() {
 
   return (
     <Layout>
-      <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
-        {paginatePokes !== [] &&
-        paginatePokes !== undefined &&
-        paginatePokes !== '' ? (
+      <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 ">
+        {paginatePokes && paginatePokes !== [] ? (
           paginatePokes.map((pokemon) => (
-            <Card key={pokemon.url} name={pokemon.name} />
+            <Card key={pokemon.url} name={pokemon.name} {...pokemon}/>
           ))
         ) : (
-          <Card />
+          <div h-screen flex items-center justify-center>
+            <Spinner />
+          </div>
         )}
       </div>
       <Pagination

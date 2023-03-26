@@ -1,11 +1,15 @@
 import Image from 'next/image';
 import pika from '../../../Fpub_vUWYAE8Y5b.jpeg';
 
-export default function Card({ img = pika, name, weight, powers }) {
+export default function Card(pokemon) {
+  const { url, name } = pokemon;
+  let weight = '';
+  let powers = '';
+
   return (
     <div className="overflow-hidden rounded-2xl bg-gray-50">
       <div className="relative flex items-stretch h-[180px] overflow-hidden">
-        <Image src={img} alt={name} width={400} height={400} className="z-0" />
+        <Image src={pika} alt={name} width={400} height={400} className="z-0" />
         {weight && (
           <div className="absolute w-max right-2 bottom-2">
             <span className="z-10 mt-2 rounded-full bg-green-500 p-1 pr-4 pl-4 font-medium text-white">
