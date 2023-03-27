@@ -20,7 +20,7 @@ export default function Dashboard() {
       <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 ">
         {paginatePokes && paginatePokes !== [] ? (
           paginatePokes.map((pokemon) => (
-            <Card key={pokemon.url} name={pokemon.name} {...pokemon}/>
+            <Card key={pokemon.url} name={pokemon.name} {...pokemon} />
           ))
         ) : (
           <div h-screen flex items-center justify-center>
