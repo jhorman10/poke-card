@@ -2,26 +2,26 @@
   {
     "email": "mail1@mail.com",
     "password": "pw1mail",
-    "username": "Usuario - 1"
+    "username": "Jhorman Orozco"
   },
   {
     "email": "mail2@mail.com",
     "password": "pw2mail",
-    "username": "Usuario - 2"
+    "username": "Stydh Restrepo"
   },
   {
     "email": "mail3@mail.com",
     "password": "pw3mail",
-    "username": "Usuario - 3"
+    "username": "Juan Lopez"
   },
   {
     "email": "mail4@mail.com",
     "password": "pw4mail",
-    "username": "Usuario - 4"
+    "username": "Esteban Ruiz"
   },
   {
     "email": "mail5@mail.com",
     "password": "pw5mail",
-    "username": "Usuario - 5"
+    "username": "Kevin Osorio"
   }
 ]
