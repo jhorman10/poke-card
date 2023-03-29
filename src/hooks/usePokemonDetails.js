@@ -13,7 +13,7 @@ export default function usePokemonDetails(url) {
     const pokeDetails = {
       moves: [data.moves[0].move.name, data.moves[1].move.name],
       weight: data.weight,
-      img: data.sprites.other.home.front_default,
+      img: data.sprites.other.dream_world.front_default,
     };
     setPokeDetails(pokeDetails);
   };
