@@ -29,12 +29,13 @@ export default function LoginPage() {
                 >
                   <div>
                     <label
-                      for="email"
+                      htmlFor="email"
                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                       Email
                     </label>
                     <input
+                      onChange={handleChange}
                       type="email"
                       name="email"
                       value={email}
@@ -46,13 +47,14 @@ export default function LoginPage() {
                   </div>
                   <div>
                     <label
-                      for="password"
+                      htmlFor="password"
                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                       Password
                     </label>
                     <div className="flex">
                       <input
+                        onChange={handleChange}
                         type={type}
                         name="password"
                         value={password}
