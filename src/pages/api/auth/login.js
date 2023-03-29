@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { serialize } from 'cookie';
 import users from '../../../db/users.json';
-import { TOKEN_SECRET, TOKEN_NAME, USER_NAME } from '@/constants';
+import { TOKEN_SECRET, TOKEN_NAME } from '@/constants';
 
 export default function loginHandler(req, res) {
   let { email, password } = req.body;

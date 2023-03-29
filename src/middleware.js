@@ -14,7 +14,6 @@ export async function middleware(request) {
     );
     return NextResponse.next();
   } catch (error) {
-    console.error(error);
     return NextResponse.redirect(new URL('/login', request.url));
   }
 }

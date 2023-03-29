@@ -4,7 +4,7 @@ import useLogin from '@/hooks/useLogin';
 import useShowPw from '@/hooks/useShowPw';
 
 export default function LoginPage() {
-  const { email, password, validForm, credentials, handleChange } = useForm();
+  const { email, password, credentials, handleChange } = useForm();
   const { spinner, handleSubmit } = useLogin(credentials);
   const { btnIcon, type, handlerType } = useShowPw();
 
@@ -75,7 +75,6 @@ export default function LoginPage() {
 
                   <button
                     type="submit"
-                    // disabled={!validForm}
                     className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                   >
                     Sign in

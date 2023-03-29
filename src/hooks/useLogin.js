@@ -27,7 +27,6 @@ export default function useLogin(credentials) {
         setSpinner(false);
       }
     } catch (error) {
-      console.log(error);
       Swal.fire({
         icon: 'error',
         title: 'Oops...',

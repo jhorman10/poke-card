@@ -15,7 +15,5 @@ export default function useForm() {
     });
   };
 
-  const validForm = email !== '' && password !== '';
-
-  return { email, password, validForm, credentials, handleChange };
+  return { email, password, credentials, handleChange };
 }
