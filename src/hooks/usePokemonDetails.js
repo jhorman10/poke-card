@@ -18,7 +18,5 @@ export default function usePokemonDetails(url) {
     setPokeDetails(pokeDetails);
   };
 
-  const { img, moves, weight } = pokeDetails;
-
   return { pokeDetails, getPokemonDetails };
 }

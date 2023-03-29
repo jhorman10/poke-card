@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 export default function useForm() {
   const [credentials, setCredentials] = useState({
-    email: 'mail1@mail.com',
-    password: 'pw1mail',
+    email: '',
+    password: '',
   });
 
   const { email, password } = credentials;

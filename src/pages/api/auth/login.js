@@ -35,10 +35,8 @@ export default function loginHandler(req, res) {
     });
 
     res.setHeader('Set-Cookie', serialized);
-    return res.json('Login successfully');
+    return res.status(200).json('Login successfully');
+  } else {
+    return res.status(401).json('Invalid email or password');
   }
-
-  return res.status(401).json({
-    error: 'Invalid email or password',
-  });
 }
