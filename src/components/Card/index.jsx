@@ -1,7 +1,6 @@
 import usePokemonDetails from '@/hooks/usePokemonDetails';
 import Image from 'next/image';
 import { useEffect } from 'react';
-import pika from '../../../Fpub_vUWYAE8Y5b.jpeg';
 
 export default function Card(pokemon) {
   const { url, name } = pokemon;
