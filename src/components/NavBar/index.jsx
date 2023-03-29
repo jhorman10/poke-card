@@ -1,11 +1,18 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLogout } from '@/hooks/useLogout';
 import { Spinner } from '../Spinner';
+import { useUser } from '@/hooks';
 
 export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
   const { spinner, getLogout } = useLogout();
+  const {user, getProfile} = useUser()
+  
+  useEffect(() => {
+    getProfile()
+  }, [])
+  
   return (
     <>
       {spinner ? (
@@ -67,6 +74,9 @@ export default function NavBar() {
                 }`}
               >
                 <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                  <li className="text-white">
+                    {user.username}
+                  </li>
                   <li className="text-white">
                     <button
                       className="shadow bg-red-500 hover:bg-red-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"

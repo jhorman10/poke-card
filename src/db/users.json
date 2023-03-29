@@ -1,22 +1,27 @@
 [
   {
     "email": "mail1@mail.com",
-    "password": "pw1mail"
+    "password": "pw1mail",
+    "username": "Usuario - 1"
   },
   {
     "email": "mail2@mail.com",
-    "password": "pw2mail"
+    "password": "pw2mail",
+    "username": "Usuario - 2"
   },
   {
     "email": "mail3@mail.com",
-    "password": "pw3mail"
+    "password": "pw3mail",
+    "username": "Usuario - 3"
   },
   {
     "email": "mail4@mail.com",
-    "password": "pw4mail"
+    "password": "pw4mail",
+    "username": "Usuario - 4"
   },
   {
     "email": "mail5@mail.com",
-    "password": "pw5mail"
+    "password": "pw5mail",
+    "username": "Usuario - 5"
   }
 ]

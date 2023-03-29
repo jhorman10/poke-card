@@ -7,7 +7,7 @@ const Pagination = ({ items, pageSize, currentPage, onPageChange }) => {
 
   return (
     <div className="relative">
-      <nav className="absolute inset-x-0 -bottom-52 flex items-center justify-center">
+      <nav className="fixed bottom-0 inset-x-0 flex items-center justify-center">
         <ul className="inline-flex -space-x-px">
           <li>
             <button

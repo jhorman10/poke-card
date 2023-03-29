@@ -6,7 +6,7 @@ import useShowPw from '@/hooks/useShowPw';
 export default function LoginPage() {
   const { email, password, validForm, credentials, handleChange } = useForm();
   const { spinner, handleSubmit } = useLogin(credentials);
-  const { btnText, type, handlerType } = useShowPw();
+  const { btnIcon, type, handlerType } = useShowPw();
 
   return (
     <>
@@ -63,7 +63,7 @@ export default function LoginPage() {
                 type="button"
                 onClick={handlerType}
               >
-                {btnText}
+                {btnIcon}
               </button>
             </div>
             <div className="md:flex md:items-center">

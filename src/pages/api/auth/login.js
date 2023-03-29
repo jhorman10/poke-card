@@ -14,12 +14,14 @@ export default function loginHandler(req, res) {
     );
   };
 
-  if (verifyUsers(email, password, users)) {
+  const verifiedUser = verifyUsers(email, password, users);
+
+  if (!!verifiedUser) {
     const token = jwt.sign(
       {
         exp: expToken,
         email,
-        username: USER_NAME,
+        username: verifiedUser.username,
       },
       TOKEN_SECRET
     );

@@ -9,6 +9,7 @@ export default function usePokemonDetails(url) {
   });
   const getPokemonDetails = async () => {
     const { data } = await axios.get(url);
+
     const pokeDetails = {
       moves: [data.moves[0].move.name, data.moves[1].move.name],
       weight: data.weight,
