@@ -9,7 +9,16 @@ export default function useLogin(credentials) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
+      if (credentials.email === '' || credentials.password === '') {
+        return Swal.fire({
+          icon: 'info',
+          title: 'Hey!',
+          text: 'Please enter your email and password',
+        });
+      }
+
       const response = await axios.post('/api/auth/login', credentials);
 
       if (response.status === 200) {
